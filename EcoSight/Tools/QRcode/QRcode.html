@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>中文二维码生成器（微信兼容）</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.min.js"></script>
+    <style>
+        /* 样式保持不变 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; min-height: 100vh; display: flex; flex-direction: column; }
+        .container { width: 90%; max-width: 600px; margin: 20px auto; padding: 15px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        textarea { width: 100%; height: 120px; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: none; font-size: 16px; margin-bottom: 10px; }
+        button { width: 100%; padding: 12px; background: #007AFF; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+        #qrcode { text-align: center; margin-top: 20px; padding: 15px; background: white; border-radius: 12px; }
+        #qrcode img { max-width: 200px; width: 100%; height: auto; padding: 10px; background: white; border: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <textarea id="inputText" placeholder="输入中文内容..."></textarea>
+            <button onclick="generateQRCode()">生成二维码</button>
+        </div>
+        <div id="qrcode"></div>
+    </div>
+
+    <script>
+        function generateQRCode() {
+            const rawText = document.getElementById('inputText').value.trim();
+            const qrcodeDiv = document.getElementById('qrcode');
+            
+            if (!rawText) {
+                alert("请输入内容");
+                return;
+            }
+
+            qrcodeDiv.innerHTML = '';
+
+            try {
+                // 关键修复点1：设置二维码版本和编码模式
+                const typeNumber = 0;    // 自动选择版本
+                const errorCorrectionLevel = 'H'; // 高容错率
+                
+                // 创建二维码实例
+                const qr = qrcode(typeNumber, errorCorrectionLevel);
+                
+                // 关键修复点2：强制使用 UTF-8 编码添加数据
+                qr.addData(unescape(encodeURIComponent(rawText)), 'Byte'); 
+                qr.make();
+
+                // 生成 SVG
+                const svg = qr.createSvgTag({
+                    cellSize: 6,
+                    margin: 2,
+                    scalable: true
+                });
+
+                qrcodeDiv.innerHTML = svg;
+            } catch (e) {
+                alert("生成失败，请检查输入内容");
+                console.error(e);
+            }
+        }
+
+        // 输入防抖处理
+        let timeout;
+        document.getElementById('inputText').addEventListener('input', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(generateQRCode, 800);
+        });
+    </script>
+</body>
+</html>
