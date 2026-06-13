@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>隐私政策（GDPR）- EcoSight Browser</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b0f16;
+        --card: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.72);
+        --border: rgba(255, 255, 255, 0.12);
+        --link: #7aa7ff;
+        --max: 920px;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --card: rgba(0, 0, 0, 0.03);
+          --text: rgba(0, 0, 0, 0.9);
+          --muted: rgba(0, 0, 0, 0.65);
+          --border: rgba(0, 0, 0, 0.12);
+          --link: #1f5cff;
+        }
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.6;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 28px 18px 64px;
+      }
+      header {
+        padding: 18px 18px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        border-radius: 16px;
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: 22px;
+        letter-spacing: 0.2px;
+      }
+      .meta {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .card {
+        margin-top: 14px;
+        padding: 18px 18px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        border-radius: 16px;
+      }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+      h3 {
+        margin: 14px 0 8px;
+        font-size: 14px;
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      ul {
+        margin: 0 0 10px 18px;
+        padding: 0;
+      }
+      li {
+        margin: 6px 0;
+      }
+      .note {
+        border-left: 3px solid var(--border);
+        padding: 10px 12px;
+        color: var(--muted);
+        background: rgba(127, 127, 127, 0.08);
+        border-radius: 12px;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+        font-size: 0.95em;
+      }
+      .lang-link {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 25px;
+        padding: 8px 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        color: var(--link);
+        font-size: 0.9rem;
+      }
+      .lang-link:hover {
+        text-decoration: none;
+        background: var(--border);
+      }
+      @media (max-width: 600px) {
+        .lang-link {
+          top: 10px;
+          right: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="pri-policy_2.0_en.html" class="lang-link">English</a>
+    <div class="wrap">
+      <header>
+        <h1>隐私政策（GDPR）– EcoSight Browser</h1>
+        <p class="meta">
+          版本：<strong>2.0.0</strong><br />
+          更新日期：<strong>2026-06-13</strong><br />
+          生效日期：<strong>2026-06-13</strong>
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1. 我们是谁（数据控制者）</h2>
+        <p>
+          本隐私政策说明 <strong>EcoSight Browser</strong>（“本应用”）如何处理个人数据。本应用由
+          <strong>TinyCand</strong> 开发。就 GDPR 而言，“数据控制者”是决定个人数据处理目的与方式的主体。
+        </p>
+        <p class="note">
+          数据控制者联系方式：<strong>TinyCand</strong><br />
+          邮箱：<strong>tinycand@outlook.com</strong>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. 适用范围</h2>
+        <p>
+          本隐私政策适用于 EcoSight Browser 移动应用及相关服务。本政策不适用于您通过本应用访问的第三方网站。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3. 我们处理的个人数据类型</h2>
+        <h3>3.1 应用使用与诊断信息（Firebase）</h3>
+        <p>
+          当您使用本应用时，我们可能会处理一定的有限信息，用于了解应用使用情况并改进稳定性与性能。根据您的选择，这些信息可能包括：
+        </p>
+        <ul>
+          <li>应用交互事件（例如：页面浏览、功能使用、按钮点击）。</li>
+          <li>应用与设备信息（例如：应用版本、系统版本、设备型号、语言）。</li>
+          <li>与设备或应用安装相关的标识符（例如：Firebase 安装标识符；以及在设备允许且启用时的广告标识符）。</li>
+          <li>在平台/SDK 支持的情况下，基于网络信号推断的粗略位置（国家/地区层级）。</li>
+        </ul>
+
+        <h3>3.2 您浏览的网页内容</h3>
+        <p>
+          本应用是浏览器。您访问的网页由第三方网站提供。为了提供浏览器核心功能，我们不需要收集您浏览的网页内容。
+          但与大多数浏览器类似，本应用可能会在本地处理 URL 与页面信息，以便加载网页、管理标签页并提供浏览器功能。
+        </p>
+        <h3>3.3 作为分析的一部分我们不会收集的数据</h3>
+        <p>就分析目的而言，我们不会收集、存储或传输以下类型的信息：</p>
+        <ul>
+          <li>浏览历史（您访问的网站列表）。</li>
+          <li>您输入的搜索关键词。</li>
+          <li>密码、支付信息或表单内容。</li>
+          <li>您浏览的网页内容。</li>
+        </ul>
+        <p class="note">
+          您访问的第三方网站可能会依据其自身隐私政策独立收集数据（例如 Cookie、追踪器与日志）。
+        </p>
+        <h3>3.4 应用权限</h3>
+        <p>本应用可能会根据您的使用场景请求以下权限：</p>
+        <ul>
+          <li><strong>网络</strong>：用于网页浏览。</li>
+          <li><strong>通知</strong>：用于在文本转语音（TTS）播放时展示通知栏控制。</li>
+          <li><strong>前台服务</strong>：用于保障 TTS 播放稳定运行。</li>
+          <li><strong>剪贴板访问</strong>：用于支持复制/粘贴；在本地处理。</li>
+          <li><strong>麦克风/相机</strong>：仅在网页请求相关能力（例如网页语音/视频功能）且您授权时使用。</li>
+          <li><strong>位置</strong>：仅在网页请求位置且您授权时使用。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. 处理目的与法律依据（GDPR）</h2>
+        <p>我们仅在具备法律依据的情况下处理个人数据。常见法律依据包括：</p>
+        <ul>
+          <li>
+            <strong>同意</strong>（GDPR 第 6(1)(a) 条）——在法律要求的情况下（例如 EEA/英国/瑞士），用于可选的分析/衡量。
+            您可随时撤回同意。
+          </li>
+          <li>
+            <strong>合法利益</strong>（GDPR 第 6(1)(f) 条）——用于基础安全、防欺诈以及维护本应用，且在权衡后不被您的权利与自由所凌驾。
+          </li>
+          <li>
+            <strong>法定义务</strong>（GDPR 第 6(1)(c) 条）——用于履行适用法律或响应主管机关的合法要求。
+          </li>
+        </ul>
+        <p class="note">
+          若您位于 EEA/英国/瑞士且我们需要就分析处理征得同意，我们会在启用前征询您的选择，并提供后续修改选择的方式。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>5. Firebase（Google）与分析</h2>
+        <p>
+          我们使用 <strong>Firebase Analytics</strong>（由 Google 提供的服务）帮助我们了解应用的使用情况，并改进功能与性能。
+        </p>
+        <ul>
+          <li>
+            服务提供方：Google Ireland Limited（适用于 EEA/英国用户）以及/或者 Google LLC（视您的所在地与服务安排而定）。
+          </li>
+          <li>
+            处理角色：就通过 Firebase Analytics 收集的分析数据而言，Google 通常以服务提供方/处理者身份提供服务。
+          </li>
+          <li>
+            同意管理（在适用情况下）：我们可能使用 Google User Messaging Platform（UMP）来请求并管理法律要求的同意选择。
+          </li>
+          <li>
+            更多信息：<a href="https://firebase.google.com/support/privacy">Firebase 隐私与安全</a>，
+            <a href="https://policies.google.com/privacy">Google 隐私政策</a>。
+          </li>
+        </ul>
+        <p>
+          若您的司法辖区要求同意，我们会依据您的选择控制分析数据收集。在支持的情况下，我们也可能将同意信号应用于 Google 技术（例如：分析存储相关的同意设置），并与您的选择保持一致。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>6. 共享与披露</h2>
+        <p>我们可能在以下情况下共享个人数据：</p>
+        <ul>
+          <li>
+            <strong>服务提供方</strong>——例如分析服务提供方（Firebase/Google），用于帮助我们运营、维护和改进本应用。
+          </li>
+          <li>
+            <strong>法律与安全</strong>——为遵守法律、执行条款或保护用户与公众安全而必要时。
+          </li>
+          <li>
+            <strong>业务转让</strong>——在合并、收购或资产出售等交易中（如法律要求，我们将提供通知）。
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>7. 跨境传输</h2>
+        <p>
+          Firebase/Google 可能在您所在国家/地区以外的服务器上处理数据，包括美国及其他司法辖区。若 GDPR 适用，我们会在需要时采用适当的跨境传输保障措施（例如标准合同条款）。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>8. 数据保存期限</h2>
+        <p>
+          我们仅在实现本隐私政策所述目的所必需的期限内保存个人数据，除非法律另有要求或允许更长的保存期限。
+        </p>
+        <p class="note">
+          分析数据的保存也会受到 Firebase 设置影响（例如配置的数据保留窗口）。在适用情况下，您可以请求删除。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>9. 您的权利与选择</h2>
+        <p>
+          根据您的所在地，您可能享有 GDPR 及其他法律项下的权利，包括：
+        </p>
+        <ul>
+          <li>访问您的个人数据并获取副本。</li>
+          <li>更正不准确或不完整的个人数据。</li>
+          <li>删除个人数据（在适用情况下）。</li>
+          <li>限制或反对某些处理。</li>
+          <li>数据可携带（在适用情况下）。</li>
+          <li>随时撤回同意（当处理基于同意时）。</li>
+        </ul>
+        <p>
+          通常您可以在应用内的隐私设置（如提供）以及设备系统设置中控制分析相关同意（例如广告标识符控制）。
+        </p>
+        <p class="note">
+          若您认为我们的处理行为违反适用法律，您也有权向所在地的数据保护监管机构提出投诉。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>10. 安全</h2>
+        <p>
+          我们采取适当的技术与组织措施，旨在保护个人数据免遭未授权访问、篡改、披露或毁损。但任何传输或存储方式都无法保证 100% 安全。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>11. 儿童</h2>
+        <p>
+          本应用不面向法律规定需要监护人同意方可进行数据处理的未成年人。如您认为儿童向我们提供了个人数据，请联系我们。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>12. 本隐私政策的变更</h2>
+        <p>
+          我们可能不时更新本隐私政策。我们会更新“更新日期”，并在法律要求的情况下提供额外通知或重新征求同意。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>13. 联系我们</h2>
+        <p>
+          如有隐私相关问题，请联系：
+          <strong>tinycand@outlook.com</strong>
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
